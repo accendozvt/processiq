@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process IQ Global — Hire Smarter. Scale Faster. Operate Better.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark-blue: #2662A9;
+    --light-blue: #2895C0;
+    --red: #C02328;
+    --dark-grey: #373D3F;
+    --grey: #5A5A5A;
+    --white: #FFFFFF;
+    --off-white: #F5F7FA;
+    --light-border: #E2E8F0;
+    --text-body: #2D3748;
+    --text-muted: #718096;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    background: var(--white);
+    color: var(--text-body);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--light-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    box-shadow: 0 1px 12px rgba(38,98,169,0.08);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-text .brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--dark-blue);
+    letter-spacing: 0.5px;
+    line-height: 1;
+  }
+
+  .logo-text .pvt {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--grey);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    letter-spacing: 0.2px;
+  }
+
+  .nav-links a:hover { background: var(--off-white); color: var(--dark-blue); }
+  .nav-links a.active { color: var(--dark-blue); background: rgba(38,98,169,0.06); }
+
+  .nav-cta {
+    background: var(--red) !important;
+    color: var(--white) !important;
+    padding: 9px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.3px;
+    transition: all 0.2s !important;
+  }
+
+  .nav-cta:hover { background: #a01e22 !important; transform: translateY(-1px); }
+
+  /* PAGES */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* SECTION COMMON */
+  section { padding: 80px 0; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 48px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--light-blue);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-subtitle {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 600px;
+    line-height: 1.65;
+  }
+
+  /* ===== HOME PAGE ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #1a4b8a 50%, #0f3566 100%);
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(40,149,192,0.18) 0%, transparent 70%);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(192,35,40,0.1) 0%, transparent 70%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(40,149,192,0.25);
+    color: #7dd3f0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(40,149,192,0.35);
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 68px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.0;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero h1 span { color: #5bc8f0; }
+
+  .hero-sub {
+    font-size: 18px;
+    color: rgba(255,255,255,0.80);
+    line-height: 1.65;
+    margin-bottom: 36px;
+    max-width: 560px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: #a01e22; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,35,40,0.35); }
+
+  .btn-outline {
+    background: transparent;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.35);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+  /* VALUE STRIP */
+  .value-strip {
+    background: var(--dark-grey);
+    padding: 0;
+  }
+
+  .value-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .value-item {
+    padding: 28px 28px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .value-item:last-child { border-right: none; }
+
+  .value-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(40,149,192,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .value-icon svg { width: 18px; height: 18px; fill: #5bc8f0; }
+
+  .value-text .vt { font-size: 14px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .value-text .vs { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.4; }
+
+  /* ABOUT INTRO */
+  .about-intro {
+    background: var(--off-white);
+  }
+
+  .about-intro-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-img-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+
+  .about-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--red);
+    color: white;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(192,35,40,0.3);
+  }
+
+  .about-badge .num { font-family: 'Barlow Condensed', sans-serif; font-size: 36px; font-weight: 800; line-height: 1; }
+  .about-badge .lbl { font-size: 12px; font-weight: 500; opacity: 0.9; margin-top: 2px; }
+
+  .about-points { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+
+  .about-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--text-body);
+  }
+
+  .about-point .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* SERVICES GRID */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--dark-blue), var(--light-blue));
+    transform: scaleX(0);
+    transition: transform 0.25s;
+  }
+
+  .service-card:hover { border-color: rgba(38,98,169,0.3); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(38,98,169,0.12); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(38,98,169,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .service-icon svg { width: 24px; height: 24px; fill: var(--dark-blue); }
+
+  .service-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* WHY US */
+  .why-us { background: var(--dark-blue); }
+
+  .why-us .section-title { color: white; }
+  .why-us .section-label { color: #7dd3f0; }
+  .why-us .section-subtitle { color: rgba(255,255,255,0.65); }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 56px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .stat-item {
+    padding: 36px 28px;
+    text-align: center;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: #5bc8f0;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-lbl {
+    font-size: 13px;
+    color: rgba(255,255,255,0.60);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  .why-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .why-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .why-check {
+    width: 28px;
+    height: 28px;
+    background: rgba(40,149,192,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .why-check svg { width: 14px; height: 14px; fill: #5bc8f0; }
+  .why-point p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.55; }
+  .why-point strong { color: white; font-weight: 600; }
+
+  /* INDUSTRIES */
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .industry-pill {
+    background: var(--off-white);
+    border: 1px solid var(--light-border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.2s;
+  }
+
+  .industry-pill:hover { background: white; border-color: rgba(38,98,169,0.3); box-shadow: 0 4px 16px rgba(38,98,169,0.08); }
+
+  .ind-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .industry-pill h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-bottom: 2px;
+  }
+
+  .industry-pill p {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  /* CTA BANNER */
+  .cta-banner {
+    background: linear-gradient(135deg, var(--red) 0%, #a01e22 100%);
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .cta-banner h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .cta-banner p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.80);
+    margin-bottom: 32px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-banner-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--red);
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+  .btn-outline-white {
+    background: transparent;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-outline-white:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+  /* ===== ABOUT PAGE ===== */
+  .about-hero {
+    background: linear-gradient(135deg, #1a4b8a 0%, var(--dark-blue) 100%);
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .about-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .about-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .company-snapshot {
+    background: var(--off-white);
+  }
+
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .snapshot-card {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 12px;
+    padding: 28px;
+  }
+
+  .snapshot-card .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light-blue);
+    margin-bottom: 8px;
+  }
+
+  .snapshot-card .value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    line-height: 1.4;
+  }
+
+  .mv-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .mv-card {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: 36px;
+    border-left: 4px solid var(--dark-blue);
+  }
+
+  .mv-card.vision { border-left-color: var(--light-blue); }
+
+  .mv-card h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+
+  .mv-card blockquote {
+    font-size: 17px;
+    font-style: italic;
+    color: var(--dark-grey);
+    line-height: 1.65;
+    margin-bottom: 14px;
+    border: none;
+    padding: 0;
+  }
+
+  .mv-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .value-card {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 12px;
+    padding: 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .value-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgba(38,98,169,0.12);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .value-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 6px;
+  }
+
+  .value-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ===== SERVICES PAGE ===== */
+  .services-hero {
+    background: linear-gradient(135deg, var(--dark-grey) 0%, #2a3132 100%);
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .services-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .services-hero p {
+    font-size: 18px;
+    color: rgba(255,255,255,0.70);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .service-detail {
+    padding: 64px 0;
+    border-bottom: 1px solid var(--light-border);
+  }
+
+  .service-detail:last-child { border-bottom: none; }
+
+  .service-detail-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .service-detail-inner.reverse { direction: rtl; }
+  .service-detail-inner.reverse > * { direction: ltr; }
+
+  .service-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 80px;
+    font-weight: 800;
+    color: rgba(38,98,169,0.08);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .service-detail h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .service-detail p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .service-bullets { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .service-bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-body);
+  }
+
+  .service-bullets li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  .ideal-tag {
+    display: inline-block;
+    background: rgba(38,98,169,0.08);
+    color: var(--dark-blue);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-top: 16px;
+  }
+
+  /* ===== HOW IT WORKS PAGE ===== */
+  .process-hero {
+    background: linear-gradient(135deg, var(--light-blue) 0%, #1a7fa8 100%);
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .process-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .process-hero p { font-size: 18px; color: rgba(255,255,255,0.80); max-width: 560px; margin: 0 auto; }
+
+  .steps-section { padding: 80px 0; }
+
+  .steps-timeline {
+    position: relative;
+    margin-top: 56px;
+  }
+
+  .steps-timeline::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--dark-blue), var(--light-blue));
+  }
+
+  .step-item {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    padding-left: 0;
+  }
+
+  .step-num-wrap {
+    flex-shrink: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .step-num {
+    width: 48px;
+    height: 48px;
+    background: var(--dark-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--dark-blue);
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-content {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 12px;
+    padding: 28px 32px;
+    flex: 1;
+    transition: all 0.2s;
+  }
+
+  .step-content:hover { box-shadow: 0 8px 32px rgba(38,98,169,0.1); border-color: rgba(38,98,169,0.25); }
+
+  .step-week {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--light-blue);
+    margin-bottom: 6px;
+  }
+
+  .step-content h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 10px;
+  }
+
+  .step-content p { font-size: 15px; color: var(--text-muted); line-height: 1.65; margin-bottom: 14px; }
+
+  .step-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+
+  .step-bullets li {
+    font-size: 13px;
+    color: var(--text-body);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .step-bullets li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: var(--light-blue);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* SECURITY */
+  .security-section { background: var(--dark-grey); padding: 80px 0; }
+  .security-section .section-title { color: white; }
+  .security-section .section-label { color: #7dd3f0; }
+
+  .security-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 48px;
+  }
+
+  .sec-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  .sec-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5bc8f0;
+    margin-bottom: 8px;
+  }
+
+  .sec-card p { font-size: 14px; color: rgba(255,255,255,0.60); line-height: 1.6; }
+
+  /* GAINS */
+  .gains-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+  }
+
+  .gain-card {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+  }
+
+  .gain-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(38,98,169,0.08);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .gain-icon svg { width: 28px; height: 28px; fill: var(--dark-blue); }
+  .gain-card h4 { font-size: 16px; font-weight: 700; color: var(--dark-blue); margin-bottom: 8px; }
+  .gain-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ===== CONTACT PAGE ===== */
+  .contact-hero {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, #0f3566 100%);
+    padding: 72px 0;
+    text-align: center;
+  }
+
+  .contact-hero h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 14px;
+  }
+
+  .contact-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 520px; margin: 0 auto; }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 64px;
+    align-items: start;
+    padding: 80px 0;
+  }
+
+  .contact-info h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .cd-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(38,98,169,0.08);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .cd-icon svg { width: 18px; height: 18px; fill: var(--dark-blue); }
+
+  .cd-text .label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px; }
+  .cd-text .value { font-size: 15px; font-weight: 600; color: var(--dark-blue); }
+
+  .discovery-box {
+    background: rgba(38,98,169,0.05);
+    border: 1px solid rgba(38,98,169,0.15);
+    border-radius: 12px;
+    padding: 24px;
+    margin-top: 32px;
+  }
+
+  .discovery-box h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+  }
+
+  .discovery-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .discovery-box ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-body);
+  }
+
+  .discovery-box ul li::before {
+    content: '✓';
+    color: var(--light-blue);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* FORM */
+  .contact-form-wrap {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 40px rgba(38,98,169,0.08);
+  }
+
+  .contact-form-wrap h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 24px;
+  }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-field { margin-bottom: 16px; }
+
+  .form-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--dark-grey);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--light-border);
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: var(--text-body);
+    background: white;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: auto;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--dark-blue);
+    box-shadow: 0 0 0 3px rgba(38,98,169,0.08);
+  }
+
+  .form-field textarea { min-height: 100px; resize: vertical; }
+
+  .form-submit {
+    width: 100%;
+    background: var(--dark-blue);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  .form-submit:hover { background: #1d4e85; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(38,98,169,0.3); }
+
+  /* FAQ */
+  .faq-section { background: var(--off-white); }
+
+  .faq-list {
+    max-width: 800px;
+    margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    background: white;
+    border: 1px solid var(--light-border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 20px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-blue);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--light-blue);
+    transition: transform 0.2s;
+    line-height: 1;
+  }
+
+  .faq-item.open .faq-q::after { transform: rotate(45deg); }
+
+  .faq-a {
+    display: none;
+    padding: 0 24px 20px;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    border-top: 1px solid var(--light-border);
+    padding-top: 16px;
+  }
+
+  .faq-item.open .faq-a { display: block; }
+
+  /* FOOTER */
+  footer {
+    background: #0d2545;
+    color: rgba(255,255,255,0.65);
+    padding: 48px 0 28px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-brand .logo-text .brand { color: white; font-size: 20px; }
+  .footer-brand .logo-text .pvt { color: rgba(255,255,255,0.45); }
+
+  .footer-brand p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.50);
+    margin-top: 12px;
+    line-height: 1.65;
+  }
+
+  footer h5 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.40);
+    margin-bottom: 16px;
+  }
+
+  footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  footer ul li a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.60);
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+
+  footer ul li a:hover { color: #5bc8f0; }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* IMAGES */
+  .img-placeholder {
+    background: linear-gradient(135deg, rgba(38,98,169,0.12) 0%, rgba(40,149,192,0.08) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    color: rgba(38,98,169,0.5);
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .img-placeholder svg { width: 36px; height: 36px; opacity: 0.5; fill: var(--dark-blue); }
+
+  /* PAGE HERO IMAGES */
+  .hero-visual {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+    mix-blend-mode: luminosity;
+  }
+
+  .hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--dark-blue) 0%, transparent 50%);
+  }
+
+  /* KOCHI SECTION */
+  .kochi-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+
+  .kochi-img {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 340px;
+  }
+
+  .kochi-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .kochi-points { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+
+  .kochi-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.55;
+  }
+
+  .kochi-point .kp-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--red);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* RESPONSIVE HELPERS */
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 48px; }
+    .value-strip-inner { grid-template-columns: repeat(2,1fr); }
+    .about-intro-inner, .services-grid, .why-points, .snapshot-grid, .security-grid, .gains-grid, .contact-layout, .footer-inner { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: repeat(2,1fr); }
+    .industries-grid, .values-grid { grid-template-columns: 1fr; }
+    .mv-section { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .service-detail-inner { grid-template-columns: 1fr; }
+    .kochi-section { grid-template-columns: 1fr; }
+    nav { padding: 0 20px; }
+    .container { padding: 0 24px; }
+    .hero-visual { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home')">
+    <svg class="logo-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="22,2 40,12 40,32 22,42 4,32 4,12" fill="none" stroke="#2662A9" stroke-width="2.5"/>
+      <polygon points="22,8 36,16 36,30 22,38 8,30 8,16" fill="none" stroke="#2895C0" stroke-width="1"/>
+      <line x1="18" y1="30" x2="18" y2="16" stroke="#C02328" stroke-width="3" stroke-linecap="round"/>
+      <line x1="22" y1="30" x2="22" y2="12" stroke="#C02328" stroke-width="3" stroke-linecap="round"/>
+      <line x1="26" y1="30" x2="26" y2="18" stroke="#2662A9" stroke-width="3" stroke-linecap="round"/>
+      <polygon points="18,16 18,12 14,14" fill="#C02328"/>
+      <polygon points="22,12 22,8 18,10" fill="#C02328"/>
+      <polygon points="26,18 26,14 22,16" fill="#2662A9"/>
+    </svg>
+    <div class="logo-text">
+      <span class="brand">PROCESS IQ GLOBAL</span>
+      <span class="pvt">Private Limited</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a>
+    <a href="#" onclick="showPage('about')" id="nav-about">About Us</a>
+    <a href="#" onclick="showPage('services')" id="nav-services">Services</a>
+    <a href="#" onclick="showPage('process')" id="nav-process">How It Works</a>
+    <a href="#" onclick="showPage('contact')" class="nav-cta" id="nav-contact">Get Started</a>
+  </div>
+</nav>
+
+<!-- ===================== HOME PAGE ===================== -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Modern office">
+      <div class="hero-img-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">BPO Partner &middot; Kochi, India</span>
+        <h1>Hire Smarter.<br><span>Scale Faster.</span><br>Operate Better.</h1>
+        <p class="hero-sub">Your premier offshore partner &mdash; delivering expert talent, seamless integration, and up to 70% in staffing cost savings for businesses across Australia, the UK, US, Europe &amp; Middle East.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="showPage('contact')">Schedule a Free Discovery Call</a>
+          <a href="#" class="btn-outline" onclick="showPage('services')">Explore Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE STRIP -->
+  <div class="value-strip">
+    <div class="container" style="padding:0 48px">
+      <div class="value-strip-inner">
+        <div class="value-item">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93V18h2v1.93c-2.77-.36-5-2.53-5.29-5.18H9V13H7.07C7.36 10.35 9.59 8.18 12.36 7.82 12.24 8.14 12 8.98 12 9.99c0 0 .5-2 2.5-2 1.12 0 2.5.5 2.5 2s-1.38 2-2.5 2c-2 0-2.5-2-2.5-2v2.01C12 12 11.5 14 13 14c1.38 0 3-.5 3-2h2c0 2.21-1.79 4-4 4-1.4 0-2.63-.69-3.38-1.73A5.03 5.03 0 0 1 11 16v2H9v-2h2v-1.93z"/></svg></div>
+          <div class="value-text"><div class="vt">Save up to 70%</div><div class="vs">Leverage India's talent advantage without compromise</div></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+          <div class="value-text"><div class="vt">Your Time Zone, Our Hours</div><div class="vs">We align shifts to your local business hours</div></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+          <div class="value-text"><div class="vt">AI-Powered Workflows</div><div class="vs">Smart automation integrated into every service</div></div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon"><svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg></div>
+          <div class="value-text"><div class="vt">Bank-Grade Security</div><div class="vs">Dedicated lines, 24/7 CCTV, zero-tolerance data policy</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT INTRO -->
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-intro-inner">
+        <div class="about-visual">
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Team collaboration">
+          </div>
+          <div class="about-badge">
+            <div class="num">70%</div>
+            <div class="lbl">Cost Savings</div>
+          </div>
+        </div>
+        <div>
+          <div class="section-label">What Makes Us Different</div>
+          <h2 class="section-title">We Don't Just Fill Seats &mdash; We Extend Your Team</h2>
+          <p style="color: var(--text-muted); line-height:1.7; margin-bottom:20px;">Founded by Australian and Indian management specialists, Process IQ Global understands the expectations of international businesses. Whether you need one specialist or an entire department, we recruit, onboard, and manage professionals who work as a seamless part of your organisation.</p>
+          <div class="about-points">
+            <div class="about-point"><div class="dot"></div><span>Founded in 2025 by Australian and Indian management professionals with deep international experience</span></div>
+            <div class="about-point"><div class="dot"></div><span>Headquartered in Kochi &mdash; India's fastest-growing tech and shared services hub</span></div>
+            <div class="about-point"><div class="dot"></div><span>Seamless IT integration &mdash; your team adopts your existing tools from day one</span></div>
+            <div class="about-point"><div class="dot"></div><span>Multi-timezone support syncing with your business hours, not ours</span></div>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="#" class="btn-primary" onclick="showPage('about')">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section style="background:white;">
+    <div class="container">
+      <div class="section-label">Our Core Services</div>
+      <h2 class="section-title">Seven Domains. One Trusted Partner.</h2>
+      <p class="section-subtitle">Expert professionals deployed across every critical function of your business &mdash; all managed from Kochi.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <h3>Loan &amp; Mortgage Processing</h3>
+          <p>End-to-end documentation, credit analysis, CRM management, broker administration, and settlement support.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div>
+          <h3>Finance &amp; Accounting</h3>
+          <p>Full-cycle bookkeeping, payroll, compliance reporting, BAS/GST reconciliation, and audit support.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg></div>
+          <h3>Legal Process Outsourcing</h3>
+          <p>Attorney support, paralegal services, document review, contract abstraction, and legal research.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+          <h3>Business Administration</h3>
+          <p>CRM management, data entry, executive assistance, calendar management, and customer onboarding.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <h3>Digital Marketing</h3>
+          <p>SEO, Google &amp; Meta Ads, social media management, Google Analytics 4, and email marketing.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg></div>
+          <h3>IT Outsourcing</h3>
+          <p>Helpdesk support, network administration, cybersecurity, cloud management, and software development support.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="#" class="btn-primary" onclick="showPage('services')">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-label">Why Process IQ Global</div>
+      <h2 class="section-title">Built for International Standards</h2>
+      <p class="section-subtitle">We combine Australian management expertise with India's talent advantage &mdash; delivering outcomes that feel local, from 10,000 kilometres away.</p>
+      <div class="stats-row">
+        <div class="stat-item"><div class="stat-num">70%</div><div class="stat-lbl">Average cost savings vs. onshore hiring</div></div>
+        <div class="stat-item"><div class="stat-num">2&ndash;4</div><div class="stat-lbl">Weeks to first operational team member</div></div>
+        <div class="stat-item"><div class="stat-num">7</div><div class="stat-lbl">Core service verticals delivered</div></div>
+        <div class="stat-item"><div class="stat-num">24/7</div><div class="stat-lbl">CCTV monitored secure operations</div></div>
+      </div>
+      <div class="why-points">
+        <div class="why-point"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><p><strong>No Mobile Policy</strong> &mdash; Mobile phones and external devices not allowed in the workspace for absolute data security.</p></div>
+        <div class="why-point"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><p><strong>Dedicated Leased Lines</strong> &mdash; Enterprise-grade internet with encrypted data transfer and VPN access.</p></div>
+        <div class="why-point"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><p><strong>Zero HR Burden</strong> &mdash; We handle recruitment, payroll, compliance, and performance management.</p></div>
+        <div class="why-point"><div class="why-check"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><p><strong>30-Day Performance Guarantee</strong> &mdash; We replace any team member who doesn't meet agreed standards at no cost.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section style="background:white;">
+    <div class="container">
+      <div class="section-label">Industries We Serve</div>
+      <h2 class="section-title">Diverse Sectors. Proven Expertise.</h2>
+      <div class="industries-grid">
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>Mortgage &amp; Lending</h4><p>Australian, UK, and US-regulated institutions</p></div></div>
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>Legal Firms</h4><p>Law practices seeking offshore support</p></div></div>
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>SMEs &amp; Startups</h4><p>Growing businesses needing operational scale</p></div></div>
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>Accounting Practices</h4><p>Full-cycle bookkeeping and reporting firms</p></div></div>
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>E-Commerce &amp; Retail</h4><p>Operations, support, and fulfilment</p></div></div>
+        <div class="industry-pill"><div class="ind-dot"></div><div><h4>Digital Agencies</h4><p>White-label SEO, social, and admin</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to Build Your Offshore Team?</h2>
+      <p>Talk to our team today and discover how Process IQ Global can transform your operations within 30 days.</p>
+      <div class="cta-banner-btns">
+        <a href="#" class="btn-white" onclick="showPage('contact')">Schedule a Free Discovery Call</a>
+        <a href="#" class="btn-outline-white" onclick="showPage('contact')">Send Us a Brief</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== ABOUT PAGE ===================== -->
+<div class="page" id="page-about">
+
+  <div class="about-hero">
+    <div class="container">
+      <div class="section-label" style="color:#7dd3f0;">Our Story</div>
+      <h1>About Process IQ Global</h1>
+      <p>Founded in 2025 to bridge the gap between international expectations and offshore excellence &mdash; headquartered in Kochi, Kerala.</p>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section style="background:white;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">A Different Kind of BPO Partner</h2>
+          <p style="color:var(--text-muted); line-height:1.7; margin-bottom:16px;">Process IQ Global was founded in 2025 by a team of Australian and Indian business management specialists who saw a clear gap in the market: international companies needed more than a staffing agency &mdash; they needed a true offshore partner that understood their standards, their systems, and their ambitions.</p>
+          <p style="color:var(--text-muted); line-height:1.7;">Headquartered in Kochi, Kerala &mdash; one of India's most dynamic technology and shared-services cities &mdash; we combined deep knowledge of Australian, UK, and US business cultures with access to India's world-class professional talent pool.</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=700&q=80" alt="Kochi skyline" style="width:100%; height:340px; object-fit:cover; border-radius:12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNAPSHOT -->
+  <section class="company-snapshot">
+    <div class="container">
+      <div class="section-label">Company Snapshot</div>
+      <h2 class="section-title">Process IQ Global at a Glance</h2>
+      <div class="snapshot-grid">
+        <div class="snapshot-card"><div class="label">Founded</div><div class="value">2025 &mdash; by Australian and Indian management specialists</div></div>
+        <div class="snapshot-card"><div class="label">Headquarters</div><div class="value">Kochi, Kerala, India &mdash; India's premier tech and BPO hub</div></div>
+        <div class="snapshot-card"><div class="label">Markets Served</div><div class="value">Australia, United Kingdom, United States, Europe &amp; Middle East</div></div>
+        <div class="snapshot-card"><div class="label">Operations</div><div class="value">Dedicated leased internet lines, 24/7 CCTV, secure environment</div></div>
+        <div class="snapshot-card"><div class="label">Timezone Support</div><div class="value">Flexible shift alignment to match your local business hours</div></div>
+        <div class="snapshot-card"><div class="label">Team</div><div class="value">Qualified professionals across all seven service verticals</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section style="background:white;">
+    <div class="container">
+      <div class="section-label">Purpose &amp; Direction</div>
+      <h2 class="section-title">Mission &amp; Vision</h2>
+      <div class="mv-section" style="margin-top:40px;">
+        <div class="mv-card">
+          <h3>Our Mission</h3>
+          <blockquote>"To support and be a reliable partner in providing colleagues who create value and are indispensable to the organisations they serve."</blockquote>
+          <p>Every professional we place is selected not only for technical competency but for their ability to become a true asset within your team &mdash; contributing ideas, maintaining standards, and growing with your business.</p>
+        </div>
+        <div class="mv-card vision">
+          <h3>Our Vision</h3>
+          <blockquote>"To be an innovative leader in Human Resource Management &mdash; developing workflow excellence through technology and Artificial Intelligence."</blockquote>
+          <p>We are actively investing in AI-assisted recruiting, smart workflow automation, and intelligent reporting systems that will continue to elevate quality and efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KOCHI ADVANTAGE -->
+  <section style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-label">Location Advantage</div>
+      <h2 class="section-title">The Kochi Advantage</h2>
+      <div class="kochi-section" style="margin-top:40px;">
+        <div class="kochi-img">
+          <img src="https://images.unsplash.com/photo-1599422314077-f4dfdaa4cd09?w=700&q=80" alt="Kochi, India">
+        </div>
+        <div>
+          <p style="color:var(--text-muted); line-height:1.7; margin-bottom:20px;">Kochi is India's answer to Singapore &mdash; a cosmopolitan, well-connected city with world-class infrastructure and a rapidly maturing technology ecosystem. Home to Infopark and SmartCity campuses, Kochi is the preferred base for Australian and UK BPO operations in South Asia.</p>
+          <div class="kochi-points">
+            <div class="kochi-point"><div class="kp-dot"></div><span>Stable modern IT infrastructure with high-speed connectivity</span></div>
+            <div class="kochi-point"><div class="kp-dot"></div><span>Strong English-proficient graduates from top Kerala universities</span></div>
+            <div class="kochi-point"><div class="kp-dot"></div><span>Lower cost-of-living vs. Bangalore or Mumbai &mdash; savings passed to clients</span></div>
+            <div class="kochi-point"><div class="kp-dot"></div><span>Growing ecosystem of legal, financial, and technology professionals</span></div>
+            <div class="kochi-point"><div class="kp-dot"></div><span>Safe, professionally vibrant city with long-term operational stability</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section style="background:white;">
+    <div class="container">
+      <div class="section-label">Our Values</div>
+      <h2 class="section-title">What We Stand For</h2>
+      <div class="values-grid">
+        <div class="value-card"><div class="value-num">01</div><div><h4>Integrity First</h4><p>We do what we say, say what we mean, and protect your data as if it were our own.</p></div></div>
+        <div class="value-card"><div class="value-num">02</div><div><h4>Seamless Partnership</h4><p>We integrate with your culture, tools, and goals &mdash; not just your task list.</p></div></div>
+        <div class="value-card"><div class="value-num">03</div><div><h4>Continuous Improvement</h4><p>We invest in technology, training, and process refinement every quarter.</p></div></div>
+        <div class="value-card"><div class="value-num">04</div><div><h4>Client-Centric Delivery</h4><p>Your KPIs are our KPIs. Your success drives every decision we make.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Let's Build Something Together</h2>
+      <p>Join companies across Australia, the UK, US, and Europe who trust Process IQ Global as their offshore partner.</p>
+      <div class="cta-banner-btns">
+        <a href="#" class="btn-white" onclick="showPage('contact')">Get Started Today</a>
+        <a href="#" class="btn-outline-white" onclick="showPage('process')">How It Works</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== SERVICES PAGE ===================== -->
+<div class="page" id="page-services">
+
+  <div class="services-hero">
+    <div class="container">
+      <div class="section-label" style="color:#7dd3f0;">What We Deliver</div>
+      <h1>Our Services</h1>
+      <p>Seven core service domains. Vetted specialists. Direct team integration from day one.</p>
+    </div>
+  </div>
+
+  <section style="background:white;">
+    <div class="container">
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">01</div><img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=500&q=80" alt="Mortgage" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Loan &amp; Mortgage Processing</h3>
+            <p>We specialise in supporting Australian, UK, and US mortgage brokerages, lending institutions, and financial advisories with precision back-office support across the entire loan lifecycle.</p>
+            <ul class="service-bullets">
+              <li>Loan application intake and document verification</li>
+              <li>Credit analysis and underwriting support</li>
+              <li>Compliance checks and regulatory documentation</li>
+              <li>Loan servicing, settlement support, and status tracking</li>
+              <li>Broker administration and CRM data management</li>
+              <li>Follow up with banks and lenders</li>
+              <li>Title and valuation coordination support</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: Mortgage brokerages, non-bank lenders, banks, and financial advisory firms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">02</div><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&q=80" alt="Finance" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Financial &amp; Accounting Services</h3>
+            <p>Our finance professionals are trained in international accounting standards including Australian GAAP, IFRS, and US GAAP, handling complex financial workflows with full confidentiality.</p>
+            <ul class="service-bullets">
+              <li>Full-cycle bookkeeping and accounts payable/receivable</li>
+              <li>Payroll processing and superannuation/pension management</li>
+              <li>Monthly and annual financial reporting</li>
+              <li>Tax preparation and BAS/GST reconciliation</li>
+              <li>Bank reconciliation and cash flow management</li>
+              <li>Audit preparation and financial compliance documentation</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: Accounting firms, SMEs, retail businesses, and corporate finance departments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">03</div><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&q=80" alt="Legal" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Legal Process Outsourcing (LPO)</h3>
+            <p>Our legal team provides qualified support to law firms and corporate legal departments seeking to reduce costs without compromising legal quality or confidentiality.</p>
+            <ul class="service-bullets">
+              <li>Attorney support and legal research assistance</li>
+              <li>Document review, due diligence, and contract abstraction</li>
+              <li>Legal transcription and brief drafting support</li>
+              <li>Paralegal and legal assistant services</li>
+              <li>Court filing coordination and case management support</li>
+              <li>Intellectual property documentation and trademark support</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: Law firms, corporate legal teams, and compliance-driven organisations</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">04</div><img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=500&q=80" alt="Admin" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Business Administration</h3>
+            <p>Our business administration professionals manage your critical operational workflows, keeping your back office running efficiently, accurately, and on time.</p>
+            <ul class="service-bullets">
+              <li>Data entry, cleansing, and database management</li>
+              <li>CRM administration (Salesforce, HubSpot, and others)</li>
+              <li>Executive virtual assistance and calendar management</li>
+              <li>Email management, scheduling, and correspondence handling</li>
+              <li>Procurement coordination and vendor management</li>
+              <li>Customer onboarding and client relationship administration</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: SMEs, professional services firms, and operational departments</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">05</div><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Digital Marketing" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Digital Marketing Services</h3>
+            <p>Our digital marketing team delivers measurable results through data-driven strategies, creative content, and technical optimisation &mdash; all managed from Kochi at a fraction of onshore costs.</p>
+            <ul class="service-bullets">
+              <li>SEO &mdash; on-page, off-page, and technical</li>
+              <li>Google Ads, Meta Ads, and LinkedIn campaign management</li>
+              <li>Social media content creation and community management</li>
+              <li>Google Analytics 4 setup, reporting, and conversion tracking</li>
+              <li>Website content management and WordPress administration</li>
+              <li>Email marketing campaigns and CRM automation</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: E-commerce brands, digital agencies, professional services, and SMEs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">06</div><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&q=80" alt="IT" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>IT Outsourcing</h3>
+            <p>We deploy skilled IT professionals who manage your infrastructure, provide helpdesk support, and strengthen your cybersecurity posture &mdash; at offshore pricing without offshore compromises.</p>
+            <ul class="service-bullets">
+              <li>Level 1 and Level 2 helpdesk and technical support</li>
+              <li>Network administration and infrastructure monitoring</li>
+              <li>Cybersecurity monitoring, patching, and incident response</li>
+              <li>Cloud services management (AWS, Azure, Google Cloud)</li>
+              <li>Software development support and QA testing</li>
+              <li>IT documentation, asset management, and system audits</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: MSPs, technology companies, healthcare, and SMEs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail">
+        <div class="service-detail-inner">
+          <div><div class="service-num">07</div><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&q=80" alt="Customer Service" style="width:100%; border-radius:10px; height:220px; object-fit:cover;"></div>
+          <div>
+            <h3>Tele-Sales, Customer Service &amp; Operations</h3>
+            <p>Our sales and customer service professionals are highly trained communicators who represent your brand with professionalism and cultural awareness, delivering outstanding customer experiences at scale.</p>
+            <ul class="service-bullets">
+              <li>Outbound tele-sales and lead qualification</li>
+              <li>Inbound customer service and complaint resolution</li>
+              <li>Live chat and email support operations</li>
+              <li>Appointment setting and sales pipeline management</li>
+              <li>Order processing, fulfilment coordination, and returns management</li>
+              <li>Operational assistants and team coordination support</li>
+            </ul>
+            <span class="ideal-tag">Ideal for: Financial services, e-commerce, real estate, SaaS, and customer-facing businesses</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Find the Right Service for Your Business</h2>
+      <p>Book a free 30-minute discovery call and we'll identify which roles can be outsourced most effectively from day one.</p>
+      <div class="cta-banner-btns">
+        <a href="#" class="btn-white" onclick="showPage('contact')">Book a Discovery Call</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== HOW IT WORKS PAGE ===================== -->
+<div class="page" id="page-process">
+
+  <div class="process-hero">
+    <div class="container">
+      <div class="section-label" style="color:rgba(255,255,255,0.7);">Simple. Fast. Risk-Free.</div>
+      <h1>How It Works</h1>
+      <p>Our structured onboarding ensures your offshore team is operational &mdash; and productive &mdash; within weeks, not months.</p>
+    </div>
+  </div>
+
+  <!-- STEPS -->
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-label">Our 5-Step Process</div>
+      <h2 class="section-title">From Discovery to Delivery</h2>
+      <div class="steps-timeline">
+
+        <div class="step-item">
+          <div class="step-num-wrap"><div class="step-num">1</div></div>
+          <div class="step-content">
+            <div class="step-week">Week 1</div>
+            <h3>Discovery Consultation</h3>
+            <p>We begin with a complimentary discovery session to understand your business, goals, workflows, and the specific roles you need filled. We review your systems, software, security requirements, and performance expectations.</p>
+            <ul class="step-bullets">
+              <li>30&ndash;60 minute video consultation with our team</li>
+              <li>Role specification, skills assessment, and volume planning</li>
+              <li>Security and data handling requirements review</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num-wrap"><div class="step-num">2</div></div>
+          <div class="step-content">
+            <div class="step-week">Week 1&ndash;2</div>
+            <h3>Proposal &amp; Agreement</h3>
+            <p>Within 48 hours of your consultation, we deliver a tailored proposal including candidate profiles, service scope, SLAs, pricing, and a proposed start timeline. We agree on KPIs, reporting cadence, and communication protocols.</p>
+            <ul class="step-bullets">
+              <li>Customised service agreement and SLA documentation</li>
+              <li>Transparent pricing with no hidden costs or lock-in penalties</li>
+              <li>Data security and confidentiality agreements (NDA/DPA)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num-wrap"><div class="step-num">3</div></div>
+          <div class="step-content">
+            <div class="step-week">Week 2&ndash;3</div>
+            <h3>Talent Recruitment &amp; Vetting</h3>
+            <p>Our experienced HR team sources, screens, tests, and interviews candidates from our pre-qualified professional network in Kochi. Shortlisted candidates are presented to you for final approval before any placement is confirmed.</p>
+            <ul class="step-bullets">
+              <li>Skills testing, competency assessments, and background verification</li>
+              <li>Reference checks and professional qualification validation</li>
+              <li>Client interviews &mdash; you choose who joins your team</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num-wrap"><div class="step-num">4</div></div>
+          <div class="step-content">
+            <div class="step-week">Week 3&ndash;4</div>
+            <h3>Onboarding &amp; Integration</h3>
+            <p>Once your team is confirmed, we manage all onboarding logistics. Your new staff are set up on your software platforms, briefed on your brand standards, trained on your workflows, and introduced to your team.</p>
+            <ul class="step-bullets">
+              <li>Software access setup and security configuration</li>
+              <li>System and process training tailored to your workflows</li>
+              <li>Introduction to your team and communication protocols</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-num-wrap"><div class="step-num" style="background:var(--red); box-shadow: 0 0 0 3px var(--red);">5</div></div>
+          <div class="step-content">
+            <div class="step-week">Ongoing</div>
+            <h3>Ongoing Management &amp; Growth</h3>
+            <p>After go-live, Process IQ Global continues to manage HR administration, performance monitoring, payroll, and compliance so you don't have to. We conduct regular check-ins and provide performance reports.</p>
+            <ul class="step-bullets">
+              <li>Monthly performance reporting and KPI tracking</li>
+              <li>Dedicated account manager for escalations and adjustments</li>
+              <li>Flexible scaling &mdash; add or adjust team members as your business grows</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="security-section">
+    <div class="container">
+      <div class="section-label">Security &amp; Compliance</div>
+      <h2 class="section-title">Built for Regulated Environments</h2>
+      <p style="color:rgba(255,255,255,0.60); margin-top:8px; max-width:560px;">Our operational security infrastructure meets the data protection standards expected by Australian, UK, and US regulatory frameworks.</p>
+      <div class="security-grid">
+        <div class="sec-card"><h4>Physical Security</h4><p>Fully monitored offices with 24/7 CCTV, restricted access zones, and secure workstations.</p></div>
+        <div class="sec-card"><h4>Network Security</h4><p>Dedicated leased internet lines, enterprise firewalls, VPN access, and encrypted data transfer.</p></div>
+        <div class="sec-card"><h4>Access Controls</h4><p>Role-based access management, multi-factor authentication, and strict no-device policies.</p></div>
+        <div class="sec-card"><h4>Data Governance</h4><p>NDA and GDPR-compatible data handling agreements executed with all clients and employees.</p></div>
+        <div class="sec-card"><h4>Compliance</h4><p>Processes designed to align with AML, KYC, and industry-specific regulatory requirements.</p></div>
+        <div class="sec-card"><h4>No Mobile Policy</h4><p>Mobile phones and personal devices are strictly prohibited in the workplace at all times.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAINS -->
+  <section style="background:var(--off-white);">
+    <div class="container">
+      <div class="section-label">What You Gain</div>
+      <h2 class="section-title">What Our Clients Experience</h2>
+      <div class="gains-grid">
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h4>Up to 70% Cost Savings</h4><p>Reduce operational overhead dramatically compared to onshore hiring.</p></div>
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg></div><h4>Faster Turnaround</h4><p>Dedicated offshore professionals working your business hours at full capacity.</p></div>
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div><h4>Zero HR Burden</h4><p>We manage recruitment, payroll, compliance, and performance management.</p></div>
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div><h4>Scalability On Demand</h4><p>Grow your team quickly without the constraints of local hiring markets.</p></div>
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div><h4>Quality Assurance</h4><p>Regular reporting, KPI tracking, and performance reviews built into every engagement.</p></div>
+        <div class="gain-card"><div class="gain-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><h4>Strategic Focus</h4><p>Free your core team to focus on high-value work while we handle the rest.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Ready to Get Started in 4 Weeks?</h2>
+      <p>Book your free discovery call today and we'll have your offshore team operational within the month.</p>
+      <div class="cta-banner-btns">
+        <a href="#" class="btn-white" onclick="showPage('contact')">Book Free Discovery Call</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== CONTACT PAGE ===================== -->
+<div class="page" id="page-contact">
+
+  <div class="contact-hero">
+    <div class="container">
+      <div class="section-label" style="color:#7dd3f0;">Let's Talk</div>
+      <h1>Get Started</h1>
+      <p>Whether you're exploring outsourcing for the first time or upgrading your current BPO partner &mdash; we're ready.</p>
+    </div>
+  </div>
+
+  <section style="background:white;">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Let's Build Your Offshore Team</h3>
+          <p style="color:var(--text-muted); font-size:15px; line-height:1.7; margin-bottom:28px;">Our team is available to connect at a time that works for your business &mdash; across all major time zones.</p>
+
+          <div class="contact-detail">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="var(--dark-blue)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div class="cd-text"><div class="label">Location</div><div class="value">Kochi, Kerala, India</div></div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="var(--dark-blue)"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+            <div class="cd-text"><div class="label">Email</div><div class="value">contact@processiqglobal.com</div></div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="var(--dark-blue)"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg></div>
+            <div class="cd-text"><div class="label">Phone / WhatsApp</div><div class="value">Available across business hours</div></div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="cd-icon"><svg viewBox="0 0 24 24" fill="var(--dark-blue)"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></div>
+            <div class="cd-text"><div class="label">LinkedIn</div><div class="value">linkedin.com/company/processiqglobal</div></div>
+          </div>
+
+          <div class="discovery-box">
+            <h4>Free Discovery Call &mdash; What to Expect</h4>
+            <ul>
+              <li>Understand your current operational challenges</li>
+              <li>Identify roles that can be outsourced from Day 1</li>
+              <li>Review your software stack and integration requirements</li>
+              <li>Receive a transparent cost estimate and proposed team structure</li>
+              <li>Answer all questions about security, compliance, and management</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Tell Us About Your Needs</h3>
+          <div class="form-row">
+            <div class="form-field"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+            <div class="form-field"><label>Company Name *</label><input type="text" placeholder="Your company"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label>Email Address *</label><input type="email" placeholder="you@company.com"></div>
+            <div class="form-field"><label>Phone / WhatsApp</label><input type="tel" placeholder="+61 or +44 number"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label>Country / Time Zone</label>
+              <select>
+                <option>Australia</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field"><label>Team Size Required</label>
+              <select>
+                <option>1 person</option>
+                <option>2&ndash;5 people</option>
+                <option>5&ndash;10 people</option>
+                <option>10+ people</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field"><label>Service of Interest</label>
+            <select>
+              <option>Loan &amp; Mortgage Processing</option>
+              <option>Finance &amp; Accounting</option>
+              <option>Legal Process Outsourcing</option>
+              <option>Business Administration</option>
+              <option>Digital Marketing</option>
+              <option>IT Outsourcing</option>
+              <option>Tele-Sales &amp; Customer Service</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+          <div class="form-field"><label>Tell Us About Your Needs</label><textarea placeholder="Describe your current challenges, the roles you need, and any specific requirements..."></textarea></div>
+          <div class="form-field"><label>How Did You Hear About Us?</label>
+            <select>
+              <option>Google Search</option>
+              <option>LinkedIn</option>
+              <option>Referral</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button class="form-submit" onclick="handleSubmit()">Submit Enquiry &amp; Schedule Discovery Call</button>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:12px; text-align:center;">We'll respond within 24 hours. No lock-in. No obligation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How long does it take to get my team started?</div>
+          <div class="faq-a">From the initial discovery call to your first team member being operational typically takes 2&ndash;4 weeks, depending on the complexity of the role and your onboarding requirements.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What happens if a team member doesn't meet our expectations?</div>
+          <div class="faq-a">We include a performance guarantee. If any professional placed by Process IQ Global does not meet agreed performance standards within the first 30 days, we will replace them at no additional cost.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do your staff work on our systems and software?</div>
+          <div class="faq-a">Yes. Our team can be trained to use your existing platforms &mdash; whether that's your CRM, accounting software, document management system, or project management tools. We do not require you to change your current technology stack.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do you protect our data and confidential information?</div>
+          <div class="faq-a">We operate a highly secured environment with dedicated leased internet lines, 24/7 CCTV, role-based access controls, multi-factor authentication, and strict NDAs with all staff. No mobile phones or personal devices are allowed in the workplace. We can align our data protocols to meet GDPR, Australian Privacy Act, and other applicable frameworks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is there a minimum contract period?</div>
+          <div class="faq-a">We offer flexible engagement models starting from month-to-month arrangements. We believe our quality of service will retain clients &mdash; not lock-in clauses.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Your team is waiting. Let's talk.</h2>
+      <p>Contact Process IQ Global today and take the first step toward smarter, leaner operations.</p>
+      <div class="cta-banner-btns">
+        <a href="mailto:info@processiqglobal.com" class="btn-white">info@processiqglobal.com</a>
+        <span style="color:rgba(255,255,255,0.7); display:flex; align-items:center; font-size:14px;">www.processiqglobal.com &nbsp;&middot;&nbsp; Kochi, Kerala, India</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo" style="text-decoration:none; margin-bottom:0">
+          <div class="logo-text">
+            <span class="brand" style="font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:white;display:block;">PROCESS IQ GLOBAL</span>
+            <span style="font-size:10px;font-weight:500;color:rgba(255,255,255,0.45);letter-spacing:1px;text-transform:uppercase;">Private Limited &middot; Kochi, Kerala, India</span>
+          </div>
+        </div>
+        <p>Your premier BPO partner &mdash; delivering expert talent, seamless integration, and cost savings for businesses across Australia, the UK, US, Europe &amp; Middle East.</p>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('about')">About Us</a></li>
+          <li><a onclick="showPage('process')">How It Works</a></li>
+          <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <ul>
+          <li><a onclick="showPage('services')">Loan &amp; Mortgage</a></li>
+          <li><a onclick="showPage('services')">Finance &amp; Accounting</a></li>
+          <li><a onclick="showPage('services')">Legal Process</a></li>
+          <li><a onclick="showPage('services')">Digital Marketing</a></li>
+          <li><a onclick="showPage('services')">IT Outsourcing</a></li>
+          <li><a onclick="showPage('services')">Customer Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@processiqglobal.com">contact@processiqglobal.com</a></li>
+          <li><a href="#">www.processiqglobal.com</a></li>
+          <li><a href="#">Kochi, Kerala, India</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Process IQ Global Pvt. Ltd. All rights reserved.</span>
+      <span>Kochi &middot; India &middot; Global</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  var navEl = document.getElementById('nav-' + name);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function toggleFaq(el) {
+  var item = el.parentElement;
+  item.classList.toggle('open');
+}
+
+function handleSubmit() {
+  alert('Thank you for your enquiry! Our team will contact you within 24 hours to schedule your free discovery call.');
+}
+</script>
+
+</body>
+</html>
