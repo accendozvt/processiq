@@ -851,26 +851,243 @@ footer ul li a:hover { color: #5bc8f0; }
 
 .faq-item.open .faq-a { display: block; }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .hero h1 { font-size: 48px; }
+/* ===== HAMBURGER NAV ===== */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+  z-index: 200;
+}
+
+.nav-hamburger:hover { background: var(--off-white); }
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--dark-grey);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== RESPONSIVE — 1024px (small laptops / large tablets) ===== */
+@media (max-width: 1024px) {
+  .container { padding: 0 32px; }
+
+  .hero h1 { font-size: 56px; }
+  .hero-sub { font-size: 17px; }
+
+  .section-title { font-size: 34px; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+  .gains-grid { grid-template-columns: repeat(2, 1fr); }
+  .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .security-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+/* ===== RESPONSIVE — 768px (tablets) ===== */
+@media (max-width: 768px) {
+  /* --- Container --- */
+  .container { padding: 0 20px; }
+  section { padding: 56px 0; }
+
+  /* --- Nav: hamburger --- */
+  nav { padding: 0 20px; height: 64px; }
+
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 20px 24px;
+    gap: 4px;
+    box-shadow: 0 8px 32px rgba(38,98,169,0.12);
+    border-top: 1px solid var(--light-border);
+    z-index: 150;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 12px 16px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-cta {
+    margin-top: 8px;
+    text-align: center;
+    padding: 13px 20px !important;
+  }
+
+  /* --- Typography --- */
+  .hero h1 { font-size: 44px; letter-spacing: 0; }
+  .hero-sub { font-size: 16px; }
+  .hero-eyebrow { font-size: 11px; }
+  .hero-btns { flex-direction: column; gap: 10px; }
+  .hero-btns a { text-align: center; }
   .hero-visual { display: none; }
+
+  .section-title { font-size: 30px; }
+  .section-subtitle { font-size: 15px; }
+
+  .page-hero { padding: 52px 0; }
+  .page-hero h1 { font-size: 42px; }
+  .page-hero p { font-size: 16px; }
+
+  /* --- Value strip --- */
   .value-strip-inner { grid-template-columns: repeat(2, 1fr); }
-  .about-intro-inner,
-  .services-grid,
-  .why-points,
-  .snapshot-grid,
-  .security-grid,
-  .gains-grid,
-  .contact-layout,
-  .footer-inner,
-  .mv-section,
-  .kochi-section { grid-template-columns: 1fr; }
+  .value-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .value-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.08); }
+  .value-item:nth-last-child(-n+2) { border-bottom: none; }
+
+  /* --- About intro --- */
+  .about-intro-inner { grid-template-columns: 1fr; gap: 48px; }
+  .about-badge { bottom: -16px; right: 12px; padding: 12px 16px; }
+  .about-badge .num { font-size: 28px; }
+
+  /* --- Services grid --- */
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+  /* --- Why Us stats --- */
   .stats-row { grid-template-columns: repeat(2, 1fr); }
-  .industries-grid,
+  .stat-num { font-size: 40px; }
+  .why-points { grid-template-columns: 1fr; }
+
+  /* --- Industries --- */
+  .industries-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* --- CTA banner --- */
+  .cta-banner { padding: 52px 0; }
+  .cta-banner h2 { font-size: 36px; }
+  .cta-banner p { font-size: 15px; }
+  .cta-banner-btns { flex-direction: column; align-items: center; gap: 10px; }
+
+  /* --- About page --- */
+  .mv-section { grid-template-columns: 1fr; gap: 24px; }
+  .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
+  .kochi-section { grid-template-columns: 1fr; gap: 32px; }
+  .kochi-img { height: 260px; }
   .values-grid { grid-template-columns: 1fr; }
+
+  /* --- Services page --- */
+  .service-detail { padding: 48px 0; }
+  .service-detail-inner { grid-template-columns: 1fr; gap: 24px; }
+  .service-num { font-size: 56px; }
+
+  /* --- How It Works --- */
+  .steps-timeline::before { left: 24px; }
+  .step-num-wrap { width: 48px; }
+  .step-num { width: 40px; height: 40px; font-size: 17px; }
+  .step-content { padding: 20px 22px; }
+  .security-grid { grid-template-columns: repeat(2, 1fr); }
+  .gains-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* --- Contact --- */
+  .contact-layout { grid-template-columns: 1fr; gap: 40px; padding: 56px 0; }
   .form-row { grid-template-columns: 1fr; }
-  .service-detail-inner { grid-template-columns: 1fr; }
-  nav { padding: 0 20px; }
-  .container { padding: 0 24px; }
+  .contact-form-wrap { padding: 28px 20px; }
+
+  /* --- Footer --- */
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* --- Inline grids in About story section --- */
+  div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+/* ===== RESPONSIVE — 480px (mobile phones) ===== */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  section { padding: 44px 0; }
+
+  /* --- Nav --- */
+  nav { height: 60px; }
+  .nav-links { top: 60px; }
+  .logo-text .brand { font-size: 15px; }
+  .logo-text .pvt { display: none; }
+  .logo-icon { width: 36px; height: 36px; }
+
+  /* --- Hero --- */
+  .hero { min-height: auto; padding: 56px 0 48px; }
+  .hero h1 { font-size: 36px; }
+  .hero-sub { font-size: 15px; max-width: 100%; }
+
+  /* --- Page hero --- */
+  .page-hero { padding: 44px 0; }
+  .page-hero h1 { font-size: 34px; }
+  .page-hero p { font-size: 15px; }
+
+  /* --- Section typography --- */
+  .section-title { font-size: 26px; }
+  .section-subtitle { font-size: 14px; }
+
+  /* --- Value strip: single column --- */
+  .value-strip-inner { grid-template-columns: 1fr; }
+  .value-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .value-item:last-child { border-bottom: none; }
+
+  /* --- About badge --- */
+  .about-badge { display: none; }
+
+  /* --- Services grid: single column --- */
+  .services-grid { grid-template-columns: 1fr; }
+
+  /* --- Stats: single column --- */
+  .stats-row { grid-template-columns: 1fr; }
+
+  /* --- Industries: single column --- */
+  .industries-grid { grid-template-columns: 1fr; }
+
+  /* --- CTA banner --- */
+  .cta-banner { padding: 44px 0; }
+  .cta-banner h2 { font-size: 28px; }
+
+  /* --- About page --- */
+  .snapshot-grid { grid-template-columns: 1fr; }
+  .kochi-img { height: 220px; }
+
+  /* --- Services --- */
+  .service-num { font-size: 44px; }
+
+  /* --- How It Works --- */
+  .step-item { gap: 16px; }
+  .steps-timeline::before { left: 20px; }
+  .step-num-wrap { width: 40px; }
+  .step-num { width: 36px; height: 36px; font-size: 15px; border-width: 2px; }
+  .security-grid { grid-template-columns: 1fr; }
+  .gains-grid { grid-template-columns: 1fr; }
+
+  /* --- Footer: single column --- */
+  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+
+  /* --- Buttons --- */
+  .btn-primary, .btn-outline, .btn-white, .btn-outline-white {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+  .form-submit { font-size: 14px; padding: 13px; }
 }
