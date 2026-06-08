@@ -299,6 +299,7 @@ footer ul li a:hover { color: #5bc8f0; }
   grid-template-columns: 55% 45%;
   min-height: 620px;
   overflow: hidden;
+  padding: 0;            /* override global section { padding: 80px 0 } */
 }
 
 /* LEFT PANEL */
