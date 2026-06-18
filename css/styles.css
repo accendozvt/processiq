@@ -436,7 +436,7 @@ footer ul li a:hover { color: #5bc8f0; }
 
 /* ===== YBR ACCREDITATION STRIP (homepage section) ===== */
 .ybr-strip {
-  background: linear-gradient(135deg, #0f3566 0%, #1a4b8a 60%, #2662A9 100%);
+  background: radial-gradient(circle at 100% 100%, rgba(192,35,40,0.45) 0%, transparent 55%), linear-gradient(135deg, #0f3566 0%, #1a4b8a 60%, #2662A9 100%);
   border-top: 3px solid var(--light-blue);
   border-bottom: 3px solid rgba(40,149,192,0.3);
   padding: 28px 0;
@@ -634,7 +634,7 @@ footer ul li a:hover { color: #5bc8f0; }
 .service-card p { font-size: 15.5px; color: var(--text-muted); line-height: 1.65; }
 
 /* ===== HOME: WHY US ===== */
-.why-us { background: var(--dark-blue); }
+.why-us { background: radial-gradient(circle at 90% 10%, rgba(192,35,40,0.40) 0%, transparent 48%), linear-gradient(135deg, var(--dark-blue) 0%, #1a4b8a 55%, #0f3566 100%); }
 
 .stats-row {
   display: grid;
