@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" role="img">
+  <title>Process IQ Global LinkedIn banner</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f3566"/>
+      <stop offset="0.55" stop-color="#1a4b8a"/>
+      <stop offset="1" stop-color="#2662A9"/>
+    </linearGradient>
+    <radialGradient id="redglow" cx="0.86" cy="0.82" r="0.5">
+      <stop offset="0" stop-color="#C02328" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C02328" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blueglow" cx="0.14" cy="0.08" r="0.5">
+      <stop offset="0" stop-color="#2895C0" stop-opacity="0.40"/>
+      <stop offset="1" stop-color="#2895C0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bottombar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C02328"/>
+      <stop offset="0.5" stop-color="#2662A9"/>
+      <stop offset="1" stop-color="#2895C0"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1584" height="396" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1584" height="396" fill="url(#redglow)"/>
+  <rect x="0" y="0" width="1584" height="396" fill="url(#blueglow)"/>
+
+  <g opacity="0.12" stroke="#9fd6ef" stroke-width="2" fill="none">
+    <circle cx="1410" cy="300" r="120"/>
+    <circle cx="1410" cy="300" r="180"/>
+    <circle cx="1410" cy="300" r="240"/>
+  </g>
+
+  <g>
+    <polygon points="150,92 200,121 200,179 150,208 100,179 100,121"
+             fill="rgba(255,255,255,0.06)" stroke="#5bc8f0" stroke-width="5"/>
+    <rect x="131" y="156" width="11" height="24" fill="#C02328"/>
+    <rect x="145" y="140" width="11" height="40" fill="#2895C0"/>
+    <rect x="159" y="124" width="11" height="56" fill="#5bc8f0"/>
+  </g>
+
+  <text x="242" y="130" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="0.5">PROCESS IQ GLOBAL</text>
+  <text x="244" y="166" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#7dd3f0" letter-spacing="4">PRIVATE LIMITED   ·   KOCHI, KERALA, INDIA</text>
+
+  <rect x="244" y="184" width="60" height="4" fill="#C02328"/>
+
+  <text x="242" y="242" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800">
+    <tspan fill="#ffffff">Hire Smarter.</tspan><tspan dx="20" fill="#5bc8f0">Scale Faster.</tspan><tspan dx="20" fill="#ffffff">Operate Better.</tspan>
+  </text>
+
+  <text x="244" y="302" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="500" fill="#cfe3f5">Offshore BPO Partner   ·   Australia · UK · USA · Europe · Middle East</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="1210" y="97" width="320" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="#5bc8f0" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="1370" y="126" font-size="17" font-weight="700" fill="#eaf6fc" text-anchor="middle" letter-spacing="0.5">UP TO 60% COST SAVINGS</text>
+
+    <rect x="1210" y="162" width="320" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="#5bc8f0" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="1370" y="191" font-size="17" font-weight="700" fill="#eaf6fc" text-anchor="middle" letter-spacing="0.5">7 SERVICE DOMAINS</text>
+
+    <rect x="1210" y="227" width="320" height="46" rx="23" fill="rgba(255,255,255,0.08)" stroke="#5bc8f0" stroke-opacity="0.55" stroke-width="1.5"/>
+    <text x="1370" y="256" font-size="16" font-weight="700" fill="#eaf6fc" text-anchor="middle" letter-spacing="0.5">YBR / VOW FINANCIAL ACCREDITED</text>
+  </g>
+
+  <rect x="0" y="388" width="1584" height="8" fill="url(#bottombar)"/>
+</svg>
